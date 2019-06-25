@@ -1,6 +1,7 @@
 package com.bitstudio.admin.dao;
 
-import com.louis.kitty.admin.model.SysLog;
+
+import com.bitstudio.admin.model.SysLog;
 
 public interface SysLogMapper {
     int deleteByPrimaryKey(Long id);

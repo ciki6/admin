@@ -1,6 +1,7 @@
 package com.bitstudio.admin.dao;
 
-import com.louis.kitty.admin.model.SysRoleDept;
+
+import com.bitstudio.admin.model.SysRoleDept;
 
 public interface SysRoleDeptMapper {
     int deleteByPrimaryKey(Long id);

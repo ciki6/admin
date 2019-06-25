@@ -2,12 +2,12 @@ package com.bitstudio.admin.service.impl;
 
 import java.util.List;
 
+import com.bitstudio.admin.dao.SysUserMapper;
+import com.bitstudio.admin.model.SysUser;
+import com.bitstudio.admin.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.louis.kitty.admin.dao.SysUserMapper;
-import com.louis.kitty.admin.model.SysUser;
-import com.louis.kitty.admin.sevice.SysUserService;
 
 @Service
 public class SysUserServiceImpl implements SysUserService {

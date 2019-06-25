@@ -2,7 +2,7 @@ package com.bitstudio.admin.service;
 
 import java.util.List;
 
-import com.louis.kitty.admin.model.SysUser;
+import com.bitstudio.admin.model.SysUser;
 
 public interface SysUserService {
 

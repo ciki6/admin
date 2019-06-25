@@ -1,6 +1,7 @@
 package com.bitstudio.admin.dao;
 
-import com.louis.kitty.admin.model.SysRoleMenu;
+
+import com.bitstudio.admin.model.SysRoleMenu;
 
 public interface SysRoleMenuMapper {
     int deleteByPrimaryKey(Long id);

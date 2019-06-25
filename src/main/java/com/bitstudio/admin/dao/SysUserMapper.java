@@ -1,8 +1,9 @@
 package com.bitstudio.admin.dao;
 
-import java.util.List;
 
-import com.louis.kitty.admin.model.SysUser;
+import com.bitstudio.admin.model.SysUser;
+
+import java.util.List;
 
 public interface SysUserMapper {
     int deleteByPrimaryKey(Long userId);

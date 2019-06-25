@@ -1,6 +1,7 @@
 package com.bitstudio.admin.dao;
 
-import com.louis.kitty.admin.model.SysMenu;
+
+import com.bitstudio.admin.model.SysMenu;
 
 public interface SysMenuMapper {
     int deleteByPrimaryKey(Long menuId);

@@ -1,6 +1,7 @@
 package com.bitstudio.admin.dao;
 
-import com.louis.kitty.admin.model.SysDept;
+
+import com.bitstudio.admin.model.SysDept;
 
 public interface SysDeptMapper {
     int deleteByPrimaryKey(Long deptId);
