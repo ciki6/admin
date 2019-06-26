@@ -5,14 +5,15 @@ import java.util.List;
 import com.bitstudio.admin.dao.SysUserMapper;
 import com.bitstudio.admin.model.SysUser;
 import com.bitstudio.admin.service.SysUserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 
 @Service
 public class SysUserServiceImpl implements SysUserService {
 
-    @Autowired
+    @Resource
     private SysUserMapper sysUserMapper;
 
     @Override

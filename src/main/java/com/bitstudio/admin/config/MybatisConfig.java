@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 @Configuration
-@MapperScan("com.bitstudio.admin.*.dao")	// 扫描DAO
+@MapperScan("com.bitstudio.admin.dao")	// 扫描DAO
 public class MybatisConfig {
     @Autowired
     private DataSource dataSource;
@@ -20,7 +20,7 @@ public class MybatisConfig {
     public SqlSessionFactory sqlSessionFactory() throws Exception {
         SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);
-        sessionFactory.setTypeAliasesPackage("com.louis.kitty.*.model");	// 扫描Model
+        sessionFactory.setTypeAliasesPackage("com.bitstudio.admin.model");	// 扫描Model
 
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         sessionFactory.setMapperLocations(resolver.getResources("classpath*:**/sqlmap/*.xml"));	// 扫描映射文件
