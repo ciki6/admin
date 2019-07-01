@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.louis.kitty.admin.dao.SysRoleMapper">
-    <resultMap id="BaseResultMap" type="com.louis.kitty.admin.model.SysRole">
+<mapper namespace="com.bitstudio.admin.mapper.SysRoleMapper">
+    <resultMap id="BaseResultMap" type="com.bitstudio.admin.model.SysRole">
         <id column="role_id" jdbcType="BIGINT" property="roleId" />
         <result column="role_name" jdbcType="VARCHAR" property="roleName" />
         <result column="remark" jdbcType="VARCHAR" property="remark" />
@@ -21,13 +21,13 @@
     delete from sys_role
     where role_id = #{roleId,jdbcType=BIGINT}
   </delete>
-    <insert id="insert" parameterType="com.louis.kitty.admin.model.SysRole">
+    <insert id="insert" parameterType="com.bitstudio.admin.model.SysRole">
     insert into sys_role (role_id, role_name, remark,
       dept_id, create_time)
     values (#{roleId,jdbcType=BIGINT}, #{roleName,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR},
       #{deptId,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP})
   </insert>
-    <insert id="insertSelective" parameterType="com.louis.kitty.admin.model.SysRole">
+    <insert id="insertSelective" parameterType="com.bitstudio.admin.model.SysRole">
         insert into sys_role
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="roleId != null">
@@ -64,7 +64,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.louis.kitty.admin.model.SysRole">
+    <update id="updateByPrimaryKeySelective" parameterType="com.bitstudio.admin.model.SysRole">
         update sys_role
         <set>
             <if test="roleName != null">
@@ -82,7 +82,7 @@
         </set>
         where role_id = #{roleId,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.louis.kitty.admin.model.SysRole">
+    <update id="updateByPrimaryKey" parameterType="com.bitstudio.admin.model.SysRole">
     update sys_role
     set role_name = #{roleName,jdbcType=VARCHAR},
       remark = #{remark,jdbcType=VARCHAR},

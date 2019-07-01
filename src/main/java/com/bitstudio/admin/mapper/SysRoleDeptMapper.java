@@ -1,4 +1,4 @@
-package com.bitstudio.admin.dao;
+package com.bitstudio.admin.mapper;
 
 
 import com.bitstudio.admin.model.SysRoleDept;

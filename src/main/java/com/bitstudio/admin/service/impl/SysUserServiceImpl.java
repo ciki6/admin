@@ -2,7 +2,7 @@ package com.bitstudio.admin.service.impl;
 
 import java.util.List;
 
-import com.bitstudio.admin.dao.SysUserMapper;
+import com.bitstudio.admin.mapper.SysUserMapper;
 import com.bitstudio.admin.model.SysUser;
 import com.bitstudio.admin.service.SysUserService;
 import org.springframework.stereotype.Service;

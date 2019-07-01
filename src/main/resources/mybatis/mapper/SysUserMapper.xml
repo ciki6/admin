@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.louis.kitty.admin.dao.SysUserMapper">
-    <resultMap id="BaseResultMap" type="com.louis.kitty.admin.model.SysUser">
+<mapper namespace="com.bitstudio.admin.mapper.SysUserMapper">
+    <resultMap id="BaseResultMap" type="com.bitstudio.admin.model.SysUser">
         <id column="user_id" jdbcType="BIGINT" property="userId" />
         <result column="username" jdbcType="VARCHAR" property="username" />
         <result column="password" jdbcType="VARCHAR" property="password" />
@@ -25,7 +25,7 @@
     delete from sys_user
     where user_id = #{userId,jdbcType=BIGINT}
   </delete>
-    <insert id="insert" parameterType="com.louis.kitty.admin.model.SysUser">
+    <insert id="insert" parameterType="com.bitstudio.admin.model.SysUser">
     insert into sys_user (user_id, username, password,
       salt, email, mobile,
       status, dept_id, create_time
@@ -35,7 +35,7 @@
       #{status,jdbcType=TINYINT}, #{deptId,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}
       )
   </insert>
-    <insert id="insertSelective" parameterType="com.louis.kitty.admin.model.SysUser">
+    <insert id="insertSelective" parameterType="com.bitstudio.admin.model.SysUser">
         insert into sys_user
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="userId != null">
@@ -96,7 +96,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.louis.kitty.admin.model.SysUser">
+    <update id="updateByPrimaryKeySelective" parameterType="com.bitstudio.admin.model.SysUser">
         update sys_user
         <set>
             <if test="username != null">
@@ -126,7 +126,7 @@
         </set>
         where user_id = #{userId,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.louis.kitty.admin.model.SysUser">
+    <update id="updateByPrimaryKey" parameterType="com.bitstudio.admin.model.SysUser">
     update sys_user
     set username = #{username,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},

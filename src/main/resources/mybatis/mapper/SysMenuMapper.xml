@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.louis.kitty.admin.dao.SysMenuMapper">
-    <resultMap id="BaseResultMap" type="com.louis.kitty.admin.model.SysMenu">
+<mapper namespace="com.bitstudio.admin.mapper.SysMenuMapper">
+    <resultMap id="BaseResultMap" type="com.bitstudio.admin.model.SysMenu">
         <id column="menu_id" jdbcType="BIGINT" property="menuId" />
         <result column="parent_id" jdbcType="BIGINT" property="parentId" />
         <result column="name" jdbcType="VARCHAR" property="name" />
@@ -24,7 +24,7 @@
     delete from sys_menu
     where menu_id = #{menuId,jdbcType=BIGINT}
   </delete>
-    <insert id="insert" parameterType="com.louis.kitty.admin.model.SysMenu">
+    <insert id="insert" parameterType="com.bitstudio.admin.model.SysMenu">
     insert into sys_menu (menu_id, parent_id, name,
       url, perms, type, icon,
       order_num)
@@ -32,7 +32,7 @@
       #{url,jdbcType=VARCHAR}, #{perms,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER}, #{icon,jdbcType=VARCHAR},
       #{orderNum,jdbcType=INTEGER})
   </insert>
-    <insert id="insertSelective" parameterType="com.louis.kitty.admin.model.SysMenu">
+    <insert id="insertSelective" parameterType="com.bitstudio.admin.model.SysMenu">
         insert into sys_menu
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="menuId != null">
@@ -87,7 +87,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.louis.kitty.admin.model.SysMenu">
+    <update id="updateByPrimaryKeySelective" parameterType="com.bitstudio.admin.model.SysMenu">
         update sys_menu
         <set>
             <if test="parentId != null">
@@ -114,7 +114,7 @@
         </set>
         where menu_id = #{menuId,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.louis.kitty.admin.model.SysMenu">
+    <update id="updateByPrimaryKey" parameterType="com.bitstudio.admin.model.SysMenu">
     update sys_menu
     set parent_id = #{parentId,jdbcType=BIGINT},
       name = #{name,jdbcType=VARCHAR},
